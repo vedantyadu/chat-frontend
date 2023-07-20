@@ -1,12 +1,9 @@
 import axios from 'axios'
-import { useContext, useEffect, useRef, useState } from 'react'
+import { useContext, useRef, useState } from 'react'
 import { RiCloseLine } from 'react-icons/ri'
 import { TbPhotoEdit } from 'react-icons/tb'
-import { urlToObject } from './utils/URLtoObject'
 import { homeContext } from './context/homecontext'
-import defaultIcon from '@/assets/default.jpeg'
 import { tabs } from './utils/tabs'
-import { socket } from '../../socket/socket'
 import { DEFAULT_GROUP_IMAGE_URL } from './utils/defaultGroupURL'
 
 
