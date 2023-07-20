@@ -1,18 +1,24 @@
-import './App.css'
+import '@/App.css'
 import { Route, Routes } from 'react-router-dom'
-import Home from '@/components/Home/Home'
-import User from '@/components/User/User'
 import { configureAxios } from './utils/axiosconfig'
 import PrivateRoute from './utils/PrivateRoute'
+import Login from '@/pages/login/login'
+import Signup from '@/pages/signup/signup'
+import Home from './pages/home/home'
+import { HomeState } from './pages/home/hooks/useHome'
 
 configureAxios()
 
 function App() {
   return (
-    <Routes>
-      <Route path='/user/*' element={<User/>}/>
-      <Route path='/' element={<PrivateRoute><Home/></PrivateRoute>}/>
-    </Routes>
+    <HomeState>
+      <Routes>
+        <Route path='/join' element={<></>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/' element={<PrivateRoute element={<Home/>}/>}/>
+      </Routes>
+    </HomeState>
   )
 }
 

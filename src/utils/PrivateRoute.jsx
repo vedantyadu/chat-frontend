@@ -2,28 +2,35 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 
-function useAuth() {
-
-  const [auth, setAuth] = useState(true)
+function PrivateRoute({element}) {
+  const [auth, setAuth] = useState()
 
   useEffect(() => {
-    const authorize = async () => {
+    const checkAuth = async () => {
       try {
         await axios.get('/user/auth')
+        setAuth(true)
       }
-      catch (err) {
+      catch {
         setAuth(false)
       }
     }
-    authorize()
+    checkAuth()
   }, [])
 
-  return {auth}
-}
-
-function PrivateRoute({children}) {
-  const {auth} = useAuth()
-  return auth? children: <Navigate to='/user/login'/>
+  if (auth == false) {
+    return (<Navigate to='/login'/>)
+  }
+  else {
+    if (auth == true) {
+      return element
+    }
+    else {
+      return (
+        <div className='w-full h-full flex'></div>
+      )
+    }
+  }
 }
 
 export default PrivateRoute
