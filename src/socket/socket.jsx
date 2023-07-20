@@ -2,7 +2,7 @@ import io from 'socket.io-client'
 import { useContext, useEffect } from 'react'
 import { homeContext } from '../pages/home/context/homecontext'
 
-export const socket = io('https://chat-backend-71wr.onrender.com:5000', {withCredentials: true, autoConnect: false})
+export const socket = io('https://chat-backend-71wr.onrender.com/', {withCredentials: true, autoConnect: false})
 
 export function useSocket() {
 
