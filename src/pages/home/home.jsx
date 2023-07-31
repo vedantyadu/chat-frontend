@@ -39,7 +39,6 @@ function Home() {
     }
     getGroups()
     getUserDetails()
-    setLoading(false)
   }, [])
 
   return (
