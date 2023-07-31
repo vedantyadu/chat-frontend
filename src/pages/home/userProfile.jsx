@@ -8,6 +8,7 @@ import { tabs } from './utils/tabs'
 import { MdAlternateEmail } from 'react-icons/md'
 import { IoMdExit } from 'react-icons/io'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 
 function UserProfile() {
@@ -19,6 +20,7 @@ function UserProfile() {
   const [status, setStatus] = useState(userDetails.userid == userProfileId? userDetails.status : members?.[curGroup]?.[userProfileId]?.status)
   const [imageURL, setImageURL] = useState(userDetails.userid == userProfileId? userDetails.image : members?.[curGroup]?.[userProfileId]?.image)
   const uploadRef = useRef()
+  const navigate = useNavigate()
 
   useEffect(() => {
     setError('')
@@ -54,7 +56,7 @@ function UserProfile() {
   const handleLogout = async () => {
     try {
       await axios.get('/user/logout')
-      window.location.href = '/'
+      navigate('/login')
     }
     catch (err) {
       setError(err.response.data.message)
