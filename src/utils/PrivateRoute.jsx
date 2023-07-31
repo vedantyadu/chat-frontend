@@ -15,7 +15,7 @@ function PrivateRoute({element}) {
         setAuth(false)
       }
     }
-    // checkAuth()
+    checkAuth()
   }, [])
 
   if (auth == false) {
