@@ -9,7 +9,7 @@ import { MdAlternateEmail } from 'react-icons/md'
 import { IoMdExit } from 'react-icons/io'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import { socket } from 'src/socket/socket'
+import { socket } from '../../socket/socket'
 
 function UserProfile() {
 
