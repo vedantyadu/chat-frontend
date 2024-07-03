@@ -2,7 +2,7 @@ import io from 'socket.io-client'
 import { useContext, useEffect } from 'react'
 import { homeContext } from '../pages/home/context/homecontext'
 
-export const socket = io('http://139.59.240.247:3000', {withCredentials: true, autoConnect: false})
+export const socket = io('https://chatappbackend.vedantyadu.online', {withCredentials: true, autoConnect: false})
 
 export function useSocket() {
 
