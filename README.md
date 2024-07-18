@@ -6,7 +6,7 @@ This repository contains the frontend for ChatApp created using React.
 #### 🔗 [Backend Github repository](https://github.com/vedantyadu/chat-backend)
 
 ## Screenshots
-![Home](./screenshots/home.png)
+![Home](./screenshots/homepage.png)
 
 ## Getting started
 ### Installing dependencies
