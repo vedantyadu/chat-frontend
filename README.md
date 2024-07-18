@@ -1,7 +1,7 @@
 # ChatApp
 A group chat app built using the **MERN** stack and **Socket.io**.    
 
-This repository contains the frontend for ChatApp.    
+This repository contains the frontend for ChatApp created using React.    
 #### 🔗 [Visit the website](https://chatapp.vedantyadu.online/)
 #### 🔗 [Backend Github repository](https://github.com/vedantyadu/chat-backend)
 ## Getting started
