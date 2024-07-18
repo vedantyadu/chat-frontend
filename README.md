@@ -4,6 +4,10 @@ A group chat app built using the **MERN** stack and **Socket.io**.
 This repository contains the frontend for ChatApp created using React.    
 #### 🔗 [Visit the website](https://chatapp.vedantyadu.online/)
 #### 🔗 [Backend Github repository](https://github.com/vedantyadu/chat-backend)
+
+## Screenshots
+![Home](./screenshots/home.png)
+
 ## Getting started
 ### Installing dependencies
 ```bash
@@ -22,4 +26,12 @@ export function configureAxios() {
   axios.defaults.baseURL = '<YOUR_BACKEND_SERVER_URL>'
   axios.defaults.withCredentials = true
 }
+```
+### Starting development server
+```bash
+npm run dev
+```
+## Building
+```bash
+npm run build
 ```
