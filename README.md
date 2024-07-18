@@ -10,5 +10,16 @@ This repository contains the frontend for ChatApp created using React.
 npm install
 ```
 ### Changing backend URLs
-- Change the socket server URL to your socket server URL in `/src/socket/socket.jsx`
-- Change the base Axios URL to your server URL in `/src/utils/axiosconfig.js`
+#### Socket server
+Change the socket server URL in [`/src/socket/socket.jsx`](./src/socket/socket.jsx) in the following format :
+```js
+export const socket = io('<YOUR_SOCKET_SERVER_URL>', {withCredentials: true, autoConnect: false})
+```
+#### Backend server
+Change the backend server URL in [`/src/utils/axiosconfig.js`](./src/utils/axiosconfig.js) in the following format :
+```js
+export function configureAxios() {
+  axios.defaults.baseURL = '<YOUR_BACKEND_SERVER_URL>'
+  axios.defaults.withCredentials = true
+}
+```
